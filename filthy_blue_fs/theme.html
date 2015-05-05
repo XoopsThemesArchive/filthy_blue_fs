@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="Keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="Description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}>-<{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body> 
+<div align="center" id="obCenter"> 
+  <table align="center" cellspacing="0" id="obLayout"> 
+    <tr> 
+      <td id="obR1" ><{if $xoops_isuser}><a href="<{$xoops_url}>/user.php?op=logout">logout?</a> &nbsp;~&nbsp; <a href="<{$xoops_url}>/user.php"><{$xoops_uname}></a><{else}><a href="<{$xoops_url}>/user.php">login</a> &nbsp;~&nbsp; <a href="<{$xoops_url}>/register.php">register</a> &nbsp;~&nbsp; <a href="<{$xoops_url}>/user.php">lost pass?</a> <{/if}></td> 
+    </tr> 
+    <tr> 
+      <td id="obHead" ><table cellspacing="0"> 
+          <tr> 
+            <td id="fiRow2Left" width="210"><form name="form1" id="form1" action="<{$xoops_url}>/search.php" method="post" > 
+                <input name="query" type="text" /> 
+                <input type="hidden" name="action" value="results" /> 
+                <input type="image" value="Search" name="search" src="<{$xoops_imageurl}>/images/srchbut.gif" alt="Search Site" align="top" /> 
+              </form></td> 
+            <td width="26"><img src="<{$xoops_imageurl}>/images/roundgreen.gif" alt="" width="26" height="58" /></td> 
+            <td id="fiAdd" > <a href="http://getfirefox.com/"
+title="Get Firefox - Take Back the Web"><img
+src="http://www.mozilla.org/products/firefox/buttons/takebacktheweb_small.png"
+width="125" height="50" border="0" alt="Get Firefox" /></a></td> 
+            <td><a href="<{$xoops_url}>/ "><img src="<{$xoops_imageurl}>/images/logo.gif" alt="<{$xoops_sitename}>" border="0" align="right" /></a></td> 
+          </tr> 
+        </table> 
+        <table id="fiRow3" cellspacing="0"> 
+          <tr> 
+            <td width="111"><img src="<{$xoops_imageurl}>/images/r3.gif" alt="" /></td> 
+            <td id="fiBanner" ><{$xoops_banner}></td> 
+          </tr> 
+        </table></td> 
+    </tr> 
+    <tr> 
+      <td><table id="obNav" cellspacing="0"> 
+          <tr> 
+            <td width="300" ><a href="<{$xoops_url}>/">HOME</a></td> 
+            <td width="300" ><a href="<{$xoops_url}>/modules/mydownloads/">DOWNLOADS</a></td> 
+            <td width="300" ><a href="<{$xoops_url}>/modules/wfsection/">THEMES</a></td> 
+            <td width="300" ><a href="<{$xoops_url}>/modules/newbb/">FORUMS</a></td> 
+            <td width="300" ><a href="<{$xoops_url}>/modules/mylinks/">LINKS</a></td> 
+            <td width="300" ><a href="<{$xoops_url}>/modules/contact/">CONTACT</a></td> 
+          </tr> 
+        </table></td> 
+    </tr> 
+    <tr> 
+      <td><table cellspacing="0"> 
+          <tr> 
+            <td rowspan="2" id="leftcolumn"> <!-- Start left blocks loop --> 
+<{foreach item=block from=$xoops_lblocks}> <{include file="filthy_blue_fs/obblock.html"}> <{/foreach}> <br /> 
+              <img src="<{$xoops_imageurl}>/images/1px.gif" class="obSpacer" alt="spacer" /> 
+              <!-- End left blocks loop --> </td> 
+            <td id="centercolumn"> <!-- Display center blocks if any --> 
+<{if $xoops_showcblock == 1}> 
+              <table cellspacing="0"> 
+                <tr> 
+                  <td id="centerCcolumn" colspan="2"> <!-- Start center-center blocks loop --> 
+<{foreach item=block from=$xoops_ccblocks}> <{include file="filthy_blue_fs/obblock_c.html"}> <{/foreach}> 
+                    <!-- End center-center blocks loop --> </td> 
+                </tr> 
+                <tr> 
+                  <td id="centerLcolumn"> <!-- Start center-left blocks loop --> 
+<{foreach item=block from=$xoops_clblocks}> <{include file="filthy_blue_fs/obblock_c.html"}> <{/foreach}> 
+                    <!-- End center-left blocks loop --> </td> 
+                  <td id="centerRcolumn"> <!-- Start center-right blocks loop --> 
+<{foreach item=block from=$xoops_crblocks}> <{include file="filthy_blue_fs/obblock_c.html"}> <{/foreach}> 
+                    <!-- End center-right blocks loop --> </td> 
+                </tr> 
+              </table> 
+<{/if}> 
+              <!-- End display center blocks --> 
+              <div id="content"> <{$xoops_contents}> </div> 
+              <br /> 
+              <br /> </td> 
+<{if $xoops_showrblock == 1}> 
+            <td rowspan="2" id="rightcolumn"> <!-- Start right blocks loop --> 
+<{foreach item=block from=$xoops_rblocks}> <{include file="filthy_blue_fs/obblock.html"}> <{/foreach}> 
+              <!-- End right blocks loop --> </td> 
+<{/if}> </tr> 
+          <tr> 
+            <td id="cmsFooter"><a href="http://astonthemes.com" target="_blank"><img src="<{$xoops_imageurl}>/images/aston.png" alt="astonthemes Xoops Themes" border="0" /></a><br /> 
+<{$xoops_footer}></td> 
+          </tr> 
+        </table></td> 
+    </tr> 
+    <tr> 
+      <td id="obFooter" >&nbsp;</td> 
+    </tr> 
+  </table> 
+</div> 
+</body>
+</html>
